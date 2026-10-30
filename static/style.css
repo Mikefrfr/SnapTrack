@@ -1,0 +1,47 @@
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b1f24;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--warn:#d97706;--bad:#dc2626;--ok:#16a34a}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--text:#e8eaed;--muted:#9aa0a6;--line:#2a2f37;--accent:#60a5fa;--warn:#fbbf24;--bad:#f87171;--ok:#4ade80}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.45 system-ui,sans-serif;background:var(--bg);color:var(--text)}
+[hidden]{display:none!important}
+h1{margin:0;font-size:1.4rem}h2{margin:0;font-size:1.15rem}
+#app{max-width:980px;margin:0 auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.auth-card{max-width:400px;margin:8vh auto;padding:22px}
+.sub{color:var(--muted);margin:4px 0 16px}.muted{color:var(--muted)}.small{font-size:.85rem}.center{text-align:center}
+.err{color:var(--bad);min-height:1.3em}.good{color:var(--ok)}
+label{display:block;margin:12px 0 4px;font-size:.88rem;color:var(--muted)}
+input,select,textarea,button{font:inherit;color:inherit}
+input[type=text],input[type=email],input[type=password],input[type=search],input[type=date],input[type=number],select,textarea{
+  width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+button{border:0;border-radius:8px;padding:9px 14px;cursor:pointer;background:var(--line)}
+button.primary{background:var(--accent);color:#fff}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--muted);padding:6px 11px}
+button.danger{color:var(--bad);border-color:var(--bad)}
+.wide{width:100%;margin-top:16px}
+.tabs{display:flex;gap:6px;margin-bottom:6px}.tab{flex:1;background:transparent;border:1px solid var(--line)}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.summary{margin:6px 0 12px;color:var(--muted)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.toolbar input[type=search]{flex:2;min-width:180px}.toolbar select{flex:1;min-width:140px;width:auto}
+.chk{display:flex;gap:6px;align-items:center;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.gcard{padding:0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:block}
+.gcard:hover{border-color:var(--accent)}
+.gimg{height:150px;background:var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gimg img{width:100%;height:100%;object-fit:cover}.pdf{font-weight:700;color:var(--muted)}
+.ginfo{padding:10px}.store{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.78rem;margin:4px 4px 0 0;border:1px solid var(--line);color:var(--muted)}
+.pill.soon{color:var(--warn);border-color:var(--warn)}.pill.urgent{color:var(--bad);border-color:var(--bad)}.pill.past{opacity:.55}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--text);padding:18px;width:min(640px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.media{margin:8px 0;text-align:center}.media img{max-width:100%;max-height:340px;border-radius:8px;border:1px solid var(--line)}
+dl{display:grid;grid-template-columns:130px 1fr;gap:6px 10px;margin:10px 0}dt{color:var(--muted)}dd{margin:0;word-break:break-word}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin:6px 0}
+td,th{text-align:left;padding:5px 6px;border-top:1px solid var(--line)}th{color:var(--muted);font-weight:500}td.num,th.num{text-align:right}
+.dl-item{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--line)}
+h3{font-size:.95rem;margin:16px 0 4px}
+.add-dl{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.add-dl input[type=text]{grid-column:1/3}
+.actions{margin-top:16px}
